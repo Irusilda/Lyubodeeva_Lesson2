@@ -26,16 +26,16 @@ class SecondActivity : AppCompatActivity() {
 
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.run{
-            putString("KEY", textForSave.text.toString())
-        }
-
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        textForSave.text = savedInstanceState.getString("KEY")
-    }
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.run{
+//            putString("KEY", textForSave.text.toString())
+//        }
+//
+//    }
+//
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+//        textForSave.text = savedInstanceState.getString("KEY")
+//    }
 }
