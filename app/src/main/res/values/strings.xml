@@ -6,4 +6,5 @@
     <string name="hint">Введите текст</string>
     <string name="go_to_mainactivity">Первая активити</string>
     <string name="first_activity_text">Первоначальный текст</string>
+    <string name="saveText">Сохранить текст</string>
 </resources>

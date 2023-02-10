@@ -11,14 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/hint"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColorHint="#78909C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/goToMainBtn"
@@ -28,5 +29,24 @@
         android:text="@string/go_to_mainactivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnForText" />
+
+    <TextView
+        android:id="@+id/textViewSecAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSecAct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnForText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/saveText"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSecAct"
+        app:layout_constraintStart_toStartOf="@+id/editTextSecAct"
         app:layout_constraintTop_toBottomOf="@+id/editTextSecAct" />
 </androidx.constraintlayout.widget.ConstraintLayout>
