@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Lyubodeeva_Lesson2</string>
-    <string name="btn_text_russian">Russian</string>
-    <string name="btn_text_english">English</string>
-    <string name="btn_text_toSecAct">Go to Second Activity</string>
-    <string name="hint">Enter</string>
-    <string name="go_to_mainactivity">Go to MainActivity</string>
+    <string name="btn_text_russian">Русский язык</string>
+    <string name="btn_text_english">Английский язык</string>
+    <string name="btn_text_toSecAct">Вторая активити</string>
+    <string name="hint">Введите текст</string>
+    <string name="go_to_mainactivity">Первая активити</string>
+    <string name="first_activity_text">Первоначальный текст</string>
 </resources>
