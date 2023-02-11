@@ -1,15 +1,18 @@
 package com.example.lyubodeeva_lesson2
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var textForSave: TextView
     private lateinit var edit: EditText
     private lateinit var saveTextBtn: Button
+    private lateinit var goToMainBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,13 @@ class SecondActivity : AppCompatActivity() {
             textForSave.text = edit.text
         }
 
+        goToMainBtn = findViewById(R.id.goToMainBtn)
+        goToMainBtn.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra("result_key", "${edit.text}")
+            setResult(RESULT_OK, intent)
+            finish()
+        }
 
     }
 

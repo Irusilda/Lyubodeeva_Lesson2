@@ -1,19 +1,33 @@
 package com.example.lyubodeeva_lesson2
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
-import java.util.Locale
+
+class MySecondActivityContract: ActivityResultContract<String?, String?>(){
+    override fun createIntent(context: Context, input: String?): Intent {
+        return Intent(context, SecondActivity::class.java)
+    }
+
+    override fun parseResult(resultCode: Int, intent: Intent?): String? {
+        return when {
+            resultCode != Activity.RESULT_OK -> null
+            else -> intent?.getStringExtra("result_key")
+        }
+    }
+}
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var textMain: TextView
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,15 +37,23 @@ class MainActivity : AppCompatActivity() {
         val btnToSecond: Button = findViewById(R.id.firstActBtn)
         val btnRussian: Button = findViewById(R.id.russianBtn)
         val btnEnglish: Button = findViewById(R.id.englishBtn)
-        val textMain: TextView = findViewById(R.id.textView)
+        textMain = findViewById(R.id.textView)
         textMain.text = getString(R.string.first_activity_text)
 
         val appLocaleRu: LocaleListCompat = LocaleListCompat.forLanguageTags("ru")
         val appLocaleEn: LocaleListCompat = LocaleListCompat.forLanguageTags("en")
 
+        val activityLauncher = registerForActivityResult(MySecondActivityContract()){
+                result ->
+            if (result != null && result.contains("[A-Za-z0-9!\"#$%&'()*+,-./:;\\\\<=>?@\\[\\]^_`{|}~]".toRegex())) {
+                    textMain.text = result
+                }
+        }
+
         btnToSecond.setOnClickListener {
-            val myIntent = Intent(this, SecondActivity::class.java)
-            startActivity(myIntent)
+//            val myIntent = Intent(this, SecondActivity::class.java)
+//            startActivity(myIntent)
+            activityLauncher.launch("")
         }
 
         btnEnglish.setOnClickListener {
@@ -45,5 +67,11 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setLocale(appLocale: LocaleListCompat){
         AppCompatDelegate.setApplicationLocales(appLocale)
+    }
+
+    override fun onRestart() {                   // если убрать этот код, будет оставаться значение из прошлого EditText
+        super.onRestart()
+        textMain.text = getString(R.string.first_activity_text)
+
     }
 }
