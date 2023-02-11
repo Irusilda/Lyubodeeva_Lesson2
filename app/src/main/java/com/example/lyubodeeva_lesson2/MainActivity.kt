@@ -68,10 +68,10 @@ class MainActivity : AppCompatActivity() {
     private fun setLocale(appLocale: LocaleListCompat){
         AppCompatDelegate.setApplicationLocales(appLocale)
     }
-
-    override fun onRestart() {                   // если убрать этот код, будет оставаться значение из прошлого EditText
-        super.onRestart()
-        textMain.text = getString(R.string.first_activity_text)
-
-    }
+//   Для дефолтного отображения текста (если ничего не было передано), а не переданного ранее из второго активити
+//    override fun onRestart() {                   //
+//        super.onRestart()
+//        textMain.text = getString(R.string.first_activity_text)
+//
+//    }
 }
