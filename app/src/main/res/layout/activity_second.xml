@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/austria_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/image_background"
+            app:srcCompat="@drawable/austria"
+            android:contentDescription="@string/flag_of_austria" />
+
+        <ImageView
+            android:id="@+id/poland_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/image_background"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/poland"
+            android:contentDescription="@string/flag_of_poland"/>
+
+        <ImageView
+            android:id="@+id/italy_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/image_background"
+            app:srcCompat="@drawable/italy"
+            android:contentDescription="@string/flag_of_italy" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/columbia_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background= "@drawable/image_background"
+            app:srcCompat="@drawable/kolymb"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/flag_of_columbia"/>
+
+        <ImageView
+            android:id="@+id/madagascar_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background= "@drawable/image_background"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/madagascar"
+            android:contentDescription="@string/flag_of_madagascar" />
+
+        <ImageView
+            android:id="@+id/thailand_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/image_background"
+            app:srcCompat="@drawable/thailand"
+            android:contentDescription="@string/flag_of_thailand"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/denmark_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background= "@drawable/image_background"
+            app:srcCompat="@drawable/denmark"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/flag_of_denmark" />
+
+        <ImageView
+            android:id="@+id/switzerland_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background= "@drawable/image_background"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/switzerland"
+            android:contentDescription="@string/flag_of_switzerland"/>
+
+        <Button
+            android:id="@+id/btn_toThird"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:text="@string/go_to_third_activity"
+            android:textSize="12sp" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
