@@ -2,4 +2,10 @@
     <string name="app_name">Lyubodeeva_Lesson2</string>
     <string name="go_to_second_activity">Go to Second Activity</string>
     <string name="go_to_third_activity">Go to Third Activity</string>
+    <string name="flag_of_austria">flag_of_Austria</string>
+    <string name="flag_of_poland">flag_of_poland</string>
+    <string name="flag_of_italy">flag_of_Italy</string>
+    <string name="flag_of_columbia">flag_of_columbia</string>
+    <string name="flag_of_madagascar">flag_of_madagascar</string>
+    <string name="flag_of_thailand">flag_of_thailand</string>
 </resources>
