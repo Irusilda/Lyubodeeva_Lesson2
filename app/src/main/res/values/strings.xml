@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lyubodeeva_Lesson2</string>
+    <string name="go_to_second_activity">Go to Second Activity</string>
+    <string name="go_to_third_activity">Go to Third Activity</string>
 </resources>
