@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             officeTitle.visibility = View.GONE
             chipGroup.visibility = View.GONE
-            flow.visibility = View.GONE
+            flowBtn.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
         }
 
