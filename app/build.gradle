@@ -4,10 +4,12 @@ plugins {
 }
 
 android {
+
     namespace 'com.example.lyubodeeva_lesson2'
     compileSdk 33
 
     defaultConfig {
+        resConfigs "ru", "en"
         applicationId "com.example.lyubodeeva_lesson2"
         minSdk 21
         targetSdk 33

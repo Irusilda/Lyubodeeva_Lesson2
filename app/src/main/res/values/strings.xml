@@ -11,8 +11,8 @@
     <string name="kazan">Казань</string>
     <string name="rostov">Ростов-на-Дону</string>
     <string name="minsk">Минск</string>
-    <string name="gomel">Гомель</string>
     <string name="contacts_text">Контакты</string>
     <string name="gallery_btn_text">Галерея</string>
     <string name="vacancies">Вакансии</string>
+    <string name="gomel">Гомель</string>
 </resources>
