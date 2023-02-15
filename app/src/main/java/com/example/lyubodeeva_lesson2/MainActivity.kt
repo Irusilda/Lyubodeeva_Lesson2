@@ -28,7 +28,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun changeVisible() {
         binding.apply {
-            groupForHide.visibility = View.GONE
+            officeTitle.visibility = View.GONE
+            chipGroup.visibility = View.GONE
+            flow.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
         }
 
