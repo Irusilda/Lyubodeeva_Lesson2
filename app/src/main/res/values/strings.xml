@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Aston intensive</string>
+    <string name="banner_aston">Banner_Aston</string>
+    <string name="logo_aston">Logo_Aston</string>
+    <string name="title_under_banner">ИТ-решения для развития бизнеса</string>
+    <string name="subtitle_text">Разработка программного обеспечения</string>
+    <string name="about_us">О нас:</string>
+    <string name="description_text">Aston - компания по разработке ПО с полным циклом услуг. Уже 15 лет мы помогаем заказчикам по всему миру трансформировать бизнес, создавая эффективные мобильные и десктопные решения.</string>
+    <string name="office_title">Офисы</string>
+    <string name="moscow">Москва</string>
+    <string name="kazan">Казань</string>
+    <string name="rostov">Ростов-на-Дону</string>
+    <string name="minsk">Минск</string>
+    <string name="gomel">Гомель</string>
+    <string name="contacts_text">Контакты</string>
+    <string name="gallery_btn_text">Галерея</string>
+    <string name="vacancies">Вакансии</string>
 </resources>
