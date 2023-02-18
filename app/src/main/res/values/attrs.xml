@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyClock">
+        <attr name="hour_hand_color" format="integer"/>
+        <attr name="minute_hand_color" format="integer"/>
+        <attr name="second_hand_color" format="integer"/>
+        <attr name="hour_hand_size" format="float"/>
+        <attr name="minute_hand_size" format="float"/>
+        <attr name="second_hand_size" format="float"/>
+    </declare-styleable>
+</resources>

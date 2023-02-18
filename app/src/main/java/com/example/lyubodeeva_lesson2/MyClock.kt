@@ -139,4 +139,27 @@ class MyClock
     fun changeSecondHandColor(color: Int) {
         secondHandColor = color
     }
+    init {
+        if (attrs != null) {
+            initAttributes(attrs)
+        }
+    }
+
+    private fun initAttributes(attrs: AttributeSet) {
+        val typedArray =
+            context.obtainStyledAttributes(attrs, R.styleable.MyClock)
+
+        hourHandColor = typedArray.getColor(R.styleable.MyClock_hour_hand_color, Color.BLACK)
+        minuteHandColor = typedArray.getColor(R.styleable.MyClock_minute_hand_color,
+            Color.BLACK
+        )
+        secondHandColor = typedArray.getColor(R.styleable.MyClock_second_hand_color,
+            Color.BLACK
+        )
+        hourHandSize = typedArray.getFloat(R.styleable.MyClock_hour_hand_size, 100f)
+        minuteHandSize = typedArray.getFloat(R.styleable.MyClock_minute_hand_size, 220f)
+        secondHandSize = typedArray.getFloat(R.styleable.MyClock_second_hand_size, 270f)
+        typedArray.recycle()
+
+    }
 }

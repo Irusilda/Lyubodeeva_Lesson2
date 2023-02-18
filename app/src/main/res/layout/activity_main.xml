@@ -8,6 +8,12 @@
 
 <com.example.lyubodeeva_lesson2.MyClock
     android:id="@+id/clockView"
+    app:hour_hand_color="@color/black"
+    app:minute_hand_color="@color/purple_200"
+    app:second_hand_color="@color/purple_500"
+    app:hour_hand_size="100"
+    app:minute_hand_size="220"
+    app:second_hand_size="270"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
     app:layout_constraintTop_toTopOf="parent"
