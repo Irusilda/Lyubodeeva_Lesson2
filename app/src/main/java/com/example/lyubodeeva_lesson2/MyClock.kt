@@ -113,4 +113,30 @@ class MyClock
             )
         }
     }
+    fun changeHourHandSize(size: Int): Float {
+        hourHandSize= size.toFloat()
+        return hourHandSize
+    }
+
+    fun changeMinuteHandSize(size: Int): Float {
+        minuteHandSize = size.toFloat()
+        return minuteHandSize
+    }
+
+    fun changeSecondHandSize(size: Int): Float {
+        secondHandSize = size.toFloat()
+        return secondHandSize
+    }
+
+    fun changeHourHandColor(color: Int) {
+        hourHandColor = color
+    }
+
+    fun changeMinuteHandColor(color: Int) {
+        minuteHandColor = color
+    }
+
+    fun changeSecondHandColor(color: Int) {
+        secondHandColor = color
+    }
 }
