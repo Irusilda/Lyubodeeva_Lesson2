@@ -178,12 +178,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
+        app:constraint_referenced_ids="contacts_btn, vacancies_btn, gallery_btn"
         app:flow_wrapMode="chain"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_start"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
-        app:constraint_referenced_ids="contacts_btn, vacancies_btn, gallery_btn"/>
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
     <Button
         android:id="@+id/contacts_btn"

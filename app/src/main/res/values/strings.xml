@@ -15,4 +15,7 @@
     <string name="gallery_btn_text">Галерея</string>
     <string name="vacancies">Вакансии</string>
     <string name="gomel">Гомель</string>
+    <string name="trainee_logo_desc">tranee_logo_desc</string>
+    <string name="trainee_title" translatable="false">Android trainee</string>
+    <string name="trainee_subtitle">Стажировка по направлению Android</string>
 </resources>
