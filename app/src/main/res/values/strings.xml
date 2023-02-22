@@ -22,5 +22,6 @@
     <string name="title_under_banner">Разработка программного обеспечения</string>
     <string name="sign_in_btn_text">Войти</string>
     <string name="error_text">Неверный пароль</string>
+    <string name="home">Главный</string>
 
 </resources>

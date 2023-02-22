@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import com.example.lyubodeeva_lesson2.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
+
 lateinit var bindingFrag: FragmentLoginBinding
 private val PASSWORD_CONST = "12345"
 
@@ -20,8 +21,7 @@ private val PASSWORD_CONST = "12345"
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-val loginForTag = inflater.inflate(R.layout.fragment_login, container, false)
-       loginForTag.tag = "loginFragmentTag"
+
         bindingFrag = FragmentLoginBinding.inflate(inflater)
         return bindingFrag.root
 
@@ -31,7 +31,6 @@ val loginForTag = inflater.inflate(R.layout.fragment_login, container, false)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       Log.d("MyLog", "${this.tag}")
 
         bindingFrag.apply {
             userPassword.addTextChangedListener(object : TextWatcher {
