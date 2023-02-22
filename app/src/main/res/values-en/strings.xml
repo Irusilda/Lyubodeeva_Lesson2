@@ -22,5 +22,16 @@
     <string name="sign_in_btn_text">Sign in</string>
     <string name="error_text">Wrong password</string>
     <string name="home">Home</string>
+    <string name="second_vacancy_desc">Administration and support of the Kubernetes cluster</string>
+    <string name="third_vacancy_desc">Implementation and support of large projects</string>
+    <string name="gomel_office_desc">Gomel, Belarus Sovetskaya str., 41B</string>
+    <string name="kazan_office_desc">Kazan, Russia, 76/1 N. Yershova str., office 213</string>
+    <string name="moscow_office_desc">oscow, Russia, Presnenskaya embankment, 6, p. 2, Business center \"Empire Tower\", 3rd entrance, 53rd floor, office 13</string>
+    <string name="rostov_office_desc">Rostov-on-Don, Russia, 246 Tekucheva str., 3rd floor</string>
+    <string name="minsk_office_desc">Minsk, Belarus Pobediteley Ave., 7A</string>
+    <string name="main_frad_bar_title">Main</string>
+    <string name="login_frag_bar_title">Log in</string>
+    <string name="vacancy_frad_bar_title">Vacancies</string>
+    <string name="offices_frad_bar_title">Offices</string>
 </resources>
 

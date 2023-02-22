@@ -1,15 +1,15 @@
-package com.example.lyubodeeva_lesson2
+package com.example.lyubodeeva_lesson2.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.lyubodeeva_lesson2.R
 import com.example.lyubodeeva_lesson2.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -21,7 +21,7 @@ private val PASSWORD_CONST = "12345"
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.login_frag_bar_title)
         bindingFrag = FragmentLoginBinding.inflate(inflater)
         return bindingFrag.root
 
@@ -72,9 +72,9 @@ private val PASSWORD_CONST = "12345"
                     signInBtn.visibility = View.GONE
                     countDownTimer.start()
 
-                        val intent = Intent(activity, MainActivity::class.java)
-                        startActivity(intent)
-                        activity?.finish()
+                     parentFragmentManager.beginTransaction()
+                         .replace(R.id.place_holder, MainFragment.newInstance())
+                         .commit()
 
                     }
                 else{

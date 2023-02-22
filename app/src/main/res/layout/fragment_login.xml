@@ -6,16 +6,22 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@android:color/white"
-    tools:context=".LoginFragment">
+    tools:context=".fragments.LoginFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="@dimen/medium_margin">
+        android:layout_marginEnd="@dimen/medium_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/login_text"
@@ -31,11 +37,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        android:layout_marginBottom="80dp"
+        android:layout_margin="@dimen/medium_margin"
         app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/tint_password_toggl">
 
@@ -52,15 +58,16 @@
     <Button
         android:id="@+id/sign_in_btn"
         android:layout_width="match_parent"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-android:background="@drawable/corners_for_btn"
-
         android:alpha="0.5"
+android:layout_margin="@dimen/medium_margin"
+        android:background="@drawable/corners_for_btn"
         android:clickable="false"
-        android:text="@string/sign_in_btn_text" />
+        android:text="@string/sign_in_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_layout" />
 
     <ProgressBar
 
@@ -68,8 +75,11 @@ android:background="@drawable/corners_for_btn"
         style="@android:style/Widget.ProgressBar.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:visibility="gone" />
+        android:layout_margin="@dimen/medium_margin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

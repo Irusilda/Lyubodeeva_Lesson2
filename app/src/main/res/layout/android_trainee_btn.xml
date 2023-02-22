@@ -2,14 +2,18 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:parentTag="androidx.cardview.widget.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/corners"
     android:layout_margin="@dimen/small_margin"
-    android:elevation="50dp">
+    android:elevation="50dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="10dp">
 
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
     <ImageView
         android:id="@+id/trainee_logo"
         android:layout_width="100dp"
@@ -45,4 +49,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/trainee_logo"
         app:layout_constraintTop_toBottomOf="@+id/trainee_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 </merge>

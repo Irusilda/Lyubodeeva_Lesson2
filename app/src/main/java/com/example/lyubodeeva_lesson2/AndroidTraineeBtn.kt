@@ -2,6 +2,7 @@ package com.example.lyubodeeva_lesson2
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lyubodeeva_lesson2.databinding.AndroidTraineeBtnBinding
 
@@ -12,7 +13,7 @@ constructor(
     defStyleAttr: Int,
     defStyleRes: Int
 
-    ) : ConstraintLayout (context, attrs, defStyleAttr) {
+    ) : CardView (context, attrs, defStyleAttr) {
 
     private val binding: AndroidTraineeBtnBinding
 
