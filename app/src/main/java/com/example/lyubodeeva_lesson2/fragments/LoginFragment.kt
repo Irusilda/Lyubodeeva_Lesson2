@@ -21,8 +21,11 @@ private val PASSWORD_CONST = "12345"
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.login_frag_bar_title)
+
         bindingFrag = FragmentLoginBinding.inflate(inflater)
+        val toolbar = bindingFrag.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        toolbar.setTitle(R.string.login_frag_bar_title)
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
         return bindingFrag.root
 
 
