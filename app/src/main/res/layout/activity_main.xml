@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
         android:layout_width="match_parent"
@@ -30,6 +41,16 @@
         app:srcCompat="@drawable/banner"
         android:scaleType="fitXY"
         android:contentDescription="@string/banner_aston" />
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/sign_in_btn_activity"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/sign_in_btn_text"
+        style="@style/main_style"
+        android:background="@drawable/corners_for_btn"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logo"

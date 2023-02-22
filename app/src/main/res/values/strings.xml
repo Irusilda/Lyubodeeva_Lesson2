@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Aston intensive</string>
-    <string name="banner_aston">Banner_Aston</string>
-    <string name="logo_aston">Logo_Aston</string>
-    <string name="title_under_banner">ИТ-решения для развития бизнеса</string>
     <string name="subtitle_text">Разработка программного обеспечения</string>
     <string name="about_us">О нас:</string>
     <string name="description_text">Aston - компания по разработке ПО с полным циклом услуг. Уже 15 лет мы помогаем заказчикам по всему миру трансформировать бизнес, создавая эффективные мобильные и десктопные решения.</string>
@@ -18,4 +15,12 @@
     <string name="trainee_logo_desc">tranee_logo_desc</string>
     <string name="trainee_title" translatable="false">Android trainee</string>
     <string name="trainee_subtitle">Стажировка по направлению Android</string>
+    <string name="login_hint">Имя</string>
+    <string name="password_hint">Пароль</string>
+    <string name="banner_aston">Banner_Aston</string>
+    <string name="logo_aston">Logo_Aston</string>
+    <string name="title_under_banner">Разработка программного обеспечения</string>
+    <string name="sign_in_btn_text">Войти</string>
+    <string name="error_text">Неверный пароль</string>
+
 </resources>

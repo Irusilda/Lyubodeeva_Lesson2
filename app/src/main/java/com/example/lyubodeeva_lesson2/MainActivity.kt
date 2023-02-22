@@ -1,8 +1,8 @@
 package com.example.lyubodeeva_lesson2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.lyubodeeva_lesson2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +13,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
+
         binding.apply {
+            signInBtnActivity?.setOnClickListener {
+                supportFragmentManager
+                    .beginTransaction()
+                    .add(android.R.id.content, LoginFragment())
+                    .commit()
+            }
             contactsBtn.setOnClickListener {
                 changeVisible()
             }

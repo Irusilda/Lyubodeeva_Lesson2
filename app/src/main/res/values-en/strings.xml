@@ -17,5 +17,9 @@
     <string name="contacts_text">Contacts</string>
     <string name="trainee_logo_desc">trainee_logo_desc</string>
     <string name="trainee_subtitle">Internship in the direction of android</string>
+    <string name="login_hint">Login</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_btn_text">Sign in</string>
+    <string name="error_text">Wrong password</string>
 </resources>
 
