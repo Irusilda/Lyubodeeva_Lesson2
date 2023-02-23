@@ -128,6 +128,9 @@ class MainActivity : AppCompatActivity(), Navigator {
     override fun backPressed() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
+                if (currentFragment is FinishApp)
+                    finish()
+                else
                 launchFragment(MainFragment.newInstance())
             }
         }

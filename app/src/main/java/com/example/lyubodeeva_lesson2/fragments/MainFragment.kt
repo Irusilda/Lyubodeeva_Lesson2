@@ -9,7 +9,7 @@ import com.example.lyubodeeva_lesson2.R
 import com.example.lyubodeeva_lesson2.databinding.FragmentMainBinding
 
 
-class MainFragment : Fragment(), CustomTitle {
+class MainFragment : Fragment(), CustomTitle, FinishApp {
 
     lateinit var binding: FragmentMainBinding
 
@@ -18,6 +18,7 @@ class MainFragment : Fragment(), CustomTitle {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         binding = FragmentMainBinding.inflate(inflater)
         return binding.root
@@ -38,4 +39,7 @@ class MainFragment : Fragment(), CustomTitle {
     }
 
     override fun getTitleRes(): Int = R.string.main_frad_bar_title
+    override fun finishApp() {
+        TODO("Not yet implemented")
+    }
 }
