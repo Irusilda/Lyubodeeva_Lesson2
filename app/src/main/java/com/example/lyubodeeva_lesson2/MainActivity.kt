@@ -2,6 +2,7 @@ package com.example.lyubodeeva_lesson2
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity(), Navigator {
     }
 
     private fun updateUi() {
-//       toolbar = binding.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+
         val fragment = currentFragment
 
         if (fragment is CustomTitle) {
@@ -122,6 +123,15 @@ class MainActivity : AppCompatActivity(), Navigator {
 
     override fun showLoginFragment() {
         launchFragmentBack(LoginFragment.newInstance())
+    }
+
+    override fun backPressed() {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                launchFragment(MainFragment.newInstance())
+            }
+        }
+        onBackPressedDispatcher.addCallback(this, callback)
     }
 
 }

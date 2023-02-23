@@ -16,6 +16,8 @@ class MainOfficeFragment : Fragment(), CustomTitle {
         savedInstanceState: Bundle?
     ): View? {
 
+        navigator().backPressed()
+
         binding = FragmentMainOfficeBinding.inflate(inflater)
         return binding.root
     }

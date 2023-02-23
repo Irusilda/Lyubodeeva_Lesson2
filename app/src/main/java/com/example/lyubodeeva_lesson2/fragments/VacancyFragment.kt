@@ -13,14 +13,14 @@ class VacancyFragment : Fragment(), CustomTitle {
     lateinit var binding: FragmentVacancyBinding
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
+        navigator().backPressed()
+
         binding = FragmentVacancyBinding.inflate(inflater)
-//        val toolbar = binding.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-//        toolbar.setTitle(R.string.vacancy_frad_bar_title)
-//        (activity as AppCompatActivity).setSupportActionBar(toolbar)
         return binding.root
     }
 

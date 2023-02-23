@@ -25,4 +25,6 @@ interface Navigator {
     fun showGomelFragment()
 
     fun showLoginFragment()
+
+    fun backPressed()
 }
