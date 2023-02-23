@@ -7,15 +7,14 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.lyubodeeva_lesson2.R
 import com.example.lyubodeeva_lesson2.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(), CustomTitle {
 
-lateinit var bindingFrag: FragmentLoginBinding
-private val PASSWORD_CONST = "12345"
+    lateinit var bindingFrag: FragmentLoginBinding
+    private val PASSWORD_CONST = "12345"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,17 +22,11 @@ private val PASSWORD_CONST = "12345"
     ): View? {
 
         bindingFrag = FragmentLoginBinding.inflate(inflater)
-        val toolbar = bindingFrag.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        toolbar.setTitle(R.string.login_frag_bar_title)
-        (activity as AppCompatActivity).setSupportActionBar(toolbar)
         return bindingFrag.root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         bindingFrag.apply {
             userPassword.addTextChangedListener(object : TextWatcher {
@@ -47,19 +40,19 @@ private val PASSWORD_CONST = "12345"
                 }
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                  signInBtn.alpha = 1f
-                  signInBtn.isClickable = true
+                    signInBtn.alpha = 1f
+                    signInBtn.isClickable = true
                 }
 
                 override fun afterTextChanged(s: Editable?) {
                     if (userPassword.text.isNullOrEmpty()) {
-                       signInBtn.alpha = 0.5f
-                       signInBtn.isClickable = false
+                        signInBtn.alpha = 0.5f
+                        signInBtn.isClickable = false
                     }
                 }
             })
             signInBtn.setOnClickListener {
-                if (userPassword.text.toString() == PASSWORD_CONST){
+                if (userPassword.text.toString() == PASSWORD_CONST) {
 
                     val countDownTimer = object : CountDownTimer(20000, 1000) {
                         override fun onTick(millisUntilFinished: Long) {
@@ -75,12 +68,11 @@ private val PASSWORD_CONST = "12345"
                     signInBtn.visibility = View.GONE
                     countDownTimer.start()
 
-                     parentFragmentManager.beginTransaction()
-                         .replace(R.id.place_holder, MainFragment.newInstance())
-                         .commit()
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.place_holder, MainFragment.newInstance())
+                        .commit()
 
-                    }
-                else{
+                } else {
                     passwordLayout.error = getString(R.string.error_text)
                     passwordLayout.isErrorEnabled = true
                 }
@@ -92,4 +84,6 @@ private val PASSWORD_CONST = "12345"
         @JvmStatic
         fun newInstance() = LoginFragment()
     }
+
+    override fun getTitleRes(): Int = R.string.login_frag_bar_title
 }

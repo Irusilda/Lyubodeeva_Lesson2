@@ -6,19 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.lyubodeeva_lesson2.R
-import com.example.lyubodeeva_lesson2.databinding.FragmentKazanOfficeBinding
+import com.example.lyubodeeva_lesson2.databinding.FragmentRostovOfficeBinding
 
+class RostovOfficeFragment : Fragment(), CustomTitle, CustomIcon {
 
-class KazanOfficeFragment : Fragment(), CustomIcon, CustomTitle {
-
-lateinit var binding: FragmentKazanOfficeBinding
+    lateinit var binding: FragmentRostovOfficeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentKazanOfficeBinding.inflate(inflater)
+        binding = FragmentRostovOfficeBinding.inflate(inflater)
         return binding.root
     }
 

@@ -6,19 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.lyubodeeva_lesson2.R
-import com.example.lyubodeeva_lesson2.databinding.FragmentKazanOfficeBinding
+import com.example.lyubodeeva_lesson2.databinding.FragmentGomelOfficeBinding
 
+class GomelOfficeFragment : Fragment(), CustomIcon, CustomTitle {
 
-class KazanOfficeFragment : Fragment(), CustomIcon, CustomTitle {
-
-lateinit var binding: FragmentKazanOfficeBinding
+    lateinit var binding: FragmentGomelOfficeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentKazanOfficeBinding.inflate(inflater)
+        binding = FragmentGomelOfficeBinding.inflate(inflater)
         return binding.root
     }
 
@@ -28,6 +27,7 @@ lateinit var binding: FragmentKazanOfficeBinding
         fun newInstance() = KazanOfficeFragment()
     }
 
-    override fun getTitleRes(): Int = R.string.offices_frad_bar_title
-    override fun getIconRes(): Int = R.drawable.ic_baseline_arrow_back_24
+    override fun getIconRes(): Int = R.string.offices_frad_bar_title
+    override fun getTitleRes(): Int = R.drawable.ic_baseline_arrow_back_24
+
 }
