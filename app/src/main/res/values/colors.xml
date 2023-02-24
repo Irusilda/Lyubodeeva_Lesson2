@@ -10,4 +10,5 @@
     <color name="main_color_text">#FF000000</color>
     <color name="chips_backgroundTint">#BCB9B9</color>
     <color name="main_color">#407cd9</color>
+    <color name="tint_password_toggl">#5A5959</color>
 </resources>

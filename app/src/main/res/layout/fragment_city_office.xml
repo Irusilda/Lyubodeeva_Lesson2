@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CityOfficeFragment">
+
+    <TextView
+        android:id="@+id/moscow_office_title"
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"/>
+
+    <TextView
+        android:id="@+id/moscow_office_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:textSize="@dimen/text_size" />
+
+</FrameLayout>

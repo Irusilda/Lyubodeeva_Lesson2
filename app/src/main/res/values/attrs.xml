@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndroidTraineeBtn">
+        <attr name="trainee_title" format="string"/>
+        <attr name="trainee_subtitle" format="string"/>
+        <attr name="trainee_icon" format="integer"/>
+    </declare-styleable>
+</resources>
