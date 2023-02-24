@@ -13,12 +13,10 @@ class MainFragment : Fragment(), CustomTitle, FinishApp {
 
     lateinit var binding: FragmentMainBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
 
         binding = FragmentMainBinding.inflate(inflater)
         return binding.root
@@ -38,8 +36,6 @@ class MainFragment : Fragment(), CustomTitle, FinishApp {
         fun newInstance() = MainFragment()
     }
 
-    override fun getTitleRes(): Int = R.string.main_frad_bar_title
-    override fun finishApp() {
-        TODO("Not yet implemented")
-    }
+    override fun getTitleRes(): Int = R.string.main_frag_bar_title
+    override fun finishApp() {}
 }

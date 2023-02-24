@@ -14,15 +14,7 @@ interface Navigator {
 
     fun showOfficeFragment()
 
-    fun showMoscowFragment()
-
-    fun showKazanFragment()
-
-    fun showRostovFragment()
-
-    fun showMinskFragment()
-
-    fun showGomelFragment()
+    fun showCityFragment(cityTitle: String, cityDesc: String)
 
     fun showLoginFragment()
 

@@ -25,19 +25,19 @@ class MainOfficeFragment : Fragment(), CustomTitle {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.moscowChip.setOnClickListener {
-            navigator().showMoscowFragment()
+            navigator().showCityFragment(getString(R.string.moscow), getString(R.string.moscow_office_desc))
         }
         binding.kazanChip.setOnClickListener {
-           navigator().showKazanFragment()
+           navigator().showCityFragment(getString(R.string.kazan), getString(R.string.kazan_office_desc))
         }
         binding.rostovChip.setOnClickListener {
-            navigator().showRostovFragment()
+            navigator().showCityFragment(getString(R.string.rostov), getString(R.string.rostov_office_desc))
         }
         binding.minskChip.setOnClickListener {
-           navigator().showMinskFragment()
+           navigator().showCityFragment(getString(R.string.minsk), getString(R.string.minsk_office_desc))
         }
         binding.gomelChip.setOnClickListener {
-           navigator().showGomelFragment()
+           navigator().showCityFragment(getString(R.string.gomel), getString(R.string.gomel_office_desc))
         }
     }
 
@@ -45,6 +45,8 @@ class MainOfficeFragment : Fragment(), CustomTitle {
 
         @JvmStatic
         fun newInstance() = MainOfficeFragment()
+
+
 
     }
     override fun getTitleRes(): Int = R.string.offices_frad_bar_title

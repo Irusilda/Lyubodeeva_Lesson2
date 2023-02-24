@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity(), Navigator {
             supportActionBar?.setHomeAsUpIndicator(fragment.getIconRes())
         }
         else supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        if (fragment is LoginFragment || fragment is CityOfficeFragment){
+            binding.bottomNavigation?.visibility = View.GONE
+        }
+        else binding.bottomNavigation?.visibility = View.VISIBLE
     }
 
 
@@ -47,7 +51,7 @@ class MainActivity : AppCompatActivity(), Navigator {
 
         toolbar = binding.root.findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        toolbar.setTitle(R.string.main_frad_bar_title)
+        toolbar.setTitle(R.string.main_frag_bar_title)
 
         binding.apply {
             if(savedInstanceState == null) {
@@ -101,24 +105,8 @@ class MainActivity : AppCompatActivity(), Navigator {
         launchFragment(MainOfficeFragment.newInstance())
     }
 
-    override fun showMoscowFragment() {
-        launchFragmentBack(MoscowOfficeFragment.newInstance())
-    }
-
-    override fun showKazanFragment() {
-        launchFragmentBack(KazanOfficeFragment.newInstance())
-    }
-
-    override fun showRostovFragment() {
-        launchFragmentBack(RostovOfficeFragment.newInstance())
-    }
-
-    override fun showMinskFragment() {
-        launchFragmentBack(MinskOfficeFragment.newInstance())
-    }
-
-    override fun showGomelFragment() {
-       launchFragmentBack(GomelOfficeFragment.newInstance())
+    override fun showCityFragment(cityTitle: String, cityDesc: String ) {
+        launchFragmentBack(CityOfficeFragment.newInstance(cityTitle, cityDesc))
     }
 
     override fun showLoginFragment() {
@@ -130,8 +118,9 @@ class MainActivity : AppCompatActivity(), Navigator {
             override fun handleOnBackPressed() {
                 if (currentFragment is FinishApp)
                     finish()
-                else
-                launchFragment(MainFragment.newInstance())
+                else {
+                    launchFragment(MainFragment.newInstance())
+                }
             }
         }
         onBackPressedDispatcher.addCallback(this, callback)

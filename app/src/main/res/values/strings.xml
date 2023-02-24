@@ -37,7 +37,7 @@
     <string name="minsk_office_desc">Минск, Беларусь пр-т Победителей, 7А</string>
     <string name="gomel_office_desc">" Гомель, Беларусь ул. Советская, 41Б"</string>
     <string name="login_frag_bar_title">Авторизация</string>
-    <string name="main_frad_bar_title">Главная страница</string>
+    <string name="main_frag_bar_title">Главная страница</string>
     <string name="vacancy_frad_bar_title">Вакансии</string>
     <string name="offices_frad_bar_title">Офисы</string>
 
