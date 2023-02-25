@@ -5,3 +5,7 @@ data class VacancyBtnData(
     val vacancyBtnSubTitle: String,
     val vacancyImage: Int
 )
+
+data class OfficeData(
+    val officeCity: String
+)

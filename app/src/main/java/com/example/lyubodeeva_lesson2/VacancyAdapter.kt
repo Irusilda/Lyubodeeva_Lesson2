@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lyubodeeva_lesson2.databinding.ItemVacancyBinding
 
-class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class VacancyAdapter : RecyclerView.Adapter<VacancyAdapter.MyViewHolder>() {
     var clickAction: (() -> Unit)? = null
     var itemBtnData: List<VacancyBtnData> = emptyList()
 
@@ -25,7 +25,6 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
                 clickAction?.invoke()
             }
         }
-
     }
 
     override fun getItemCount(): Int = itemBtnData.size

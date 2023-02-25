@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.lyubodeeva_lesson2.DataVacancyStorage
-import com.example.lyubodeeva_lesson2.MyAdapter
+import com.example.lyubodeeva_lesson2.DataStorage
+import com.example.lyubodeeva_lesson2.VacancyAdapter
 import com.example.lyubodeeva_lesson2.R
 import com.example.lyubodeeva_lesson2.databinding.FragmentVacancyBinding
 
 class VacancyFragment : Fragment(), CustomTitle {
 
     lateinit var binding: FragmentVacancyBinding
-    lateinit var adapter: MyAdapter
+    lateinit var adapter: VacancyAdapter
     override fun onCreateView(
 
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,9 +30,9 @@ class VacancyFragment : Fragment(), CustomTitle {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val vacancyItem = DataVacancyStorage.getVacancyList()
+        val vacancyItem = DataStorage.getVacancyList()
 
-        adapter = MyAdapter().apply {
+        adapter = VacancyAdapter().apply {
             itemBtnData = vacancyItem
             clickAction = ::showSometh
         }

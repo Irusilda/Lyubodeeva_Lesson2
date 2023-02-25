@@ -1,6 +1,6 @@
 package com.example.lyubodeeva_lesson2
 
-object DataVacancyStorage {
+object DataStorage {
     fun getVacancyList(): List<VacancyBtnData> {
         return listOf(
             VacancyBtnData("Android trainee",
@@ -63,6 +63,15 @@ object DataVacancyStorage {
             VacancyBtnData("IT-Recruiter",
                 "Работа с актуальными вакансиями, поиск и подбор персонала",
                 R.drawable.logo)
+        )
+    }
+    fun getOfficeList(): List<OfficeData>{
+        return listOf(
+            OfficeData("Москва"),
+            OfficeData("Казань"),
+            OfficeData("Ростов-на Дону"),
+            OfficeData("Минск"),
+            OfficeData("Гомель"),
         )
     }
 }
