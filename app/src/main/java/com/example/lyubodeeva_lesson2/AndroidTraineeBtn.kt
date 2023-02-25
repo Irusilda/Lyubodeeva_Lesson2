@@ -3,7 +3,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lyubodeeva_lesson2.databinding.AndroidTraineeBtnBinding
 
 class AndroidTraineeBtn
@@ -50,16 +49,16 @@ constructor(
     }
 
     fun setTraineeSubtitle(traineeSubtitle: String?) {
-        binding.traineeSubtitle.text = traineeSubtitle
+        binding.vacancySubtitle.text = traineeSubtitle
     }
 
     fun setTraineeTitle(traineeTitle: String?) {
-        binding.traineeTitle.text = traineeTitle
+        binding.vacancyTitle.text = traineeTitle
 
     }
 
     fun setTraineeIcon(traineeIcon: Int) {
-        binding.traineeLogo.setImageResource(traineeIcon)
+        binding.vacancyLogo.setImageResource(traineeIcon)
 
     }
 }
