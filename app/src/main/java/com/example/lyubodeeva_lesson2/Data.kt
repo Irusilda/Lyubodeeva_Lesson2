@@ -7,5 +7,7 @@ data class VacancyBtnData(
 )
 
 data class OfficeData(
-    val officeCity: String
+    val officeCity: String,
+    val viewType: Int = R.layout.item_office
+
 )

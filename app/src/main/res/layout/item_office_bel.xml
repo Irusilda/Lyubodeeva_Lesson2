@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:padding="@dimen/small_margin"
     android:layout_height="wrap_content"
-    android:id="@+id/item_conteiner">
+    android:id="@+id/item_conteiner_bel">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
-        android:background="#0693D3"
+        android:background="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/item_office"
+            android:id="@+id/item_office_bel"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="@dimen/medium_margin"
@@ -30,21 +30,20 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/rus_flag"
+            app:layout_constraintEnd_toStartOf="@+id/rus_flag"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/rus_flag"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="16dp"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="@+id/item_office"
-            app:layout_constraintEnd_toStartOf="@+id/item_office"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/item_office"
-            app:srcCompat="@drawable/flag_rf" />
+            app:layout_constraintBottom_toBottomOf="@+id/item_office_bel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_office_bel"
+            app:srcCompat="@drawable/flag_bel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

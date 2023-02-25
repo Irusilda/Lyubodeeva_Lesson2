@@ -70,8 +70,8 @@ object DataStorage {
             OfficeData("Москва"),
             OfficeData("Казань"),
             OfficeData("Ростов-на-Дону"),
-            OfficeData("Минск"),
-            OfficeData("Гомель"),
+            OfficeData("Минск", R.layout.item_office_bel),
+            OfficeData("Гомель",  R.layout.item_office_bel),
         )
     }
 }
