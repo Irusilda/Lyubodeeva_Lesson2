@@ -69,7 +69,7 @@ object DataStorage {
         return listOf(
             OfficeData("Москва"),
             OfficeData("Казань"),
-            OfficeData("Ростов-на Дону"),
+            OfficeData("Ростов-на-Дону"),
             OfficeData("Минск"),
             OfficeData("Гомель"),
         )

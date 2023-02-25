@@ -33,9 +33,9 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="moscow_office_desc">Москва, Россия Пресненская набережная, д.6, стр. 2, БЦ «Башня Империя», 3 подъезд, 53 этаж, офис 13</string>
     <string name="kazan_office_desc">Казань, Россия ул. Н. Ершова, 76/1, оф. 213</string>
-    <string name="rostov_office_desc">" Ростов-на-Дону, Россия ул. Текучева, 246, 3 этаж"</string>
+    <string name="rostov_office_desc">Ростов-на-Дону, Россия ул. Текучева, 246, 3 этаж</string>
     <string name="minsk_office_desc">Минск, Беларусь пр-т Победителей, 7А</string>
-    <string name="gomel_office_desc">" Гомель, Беларусь ул. Советская, 41Б"</string>
+    <string name="gomel_office_desc">Гомель, Беларусь ул. Советская, 41Б</string>
     <string name="login_frag_bar_title">Авторизация</string>
     <string name="main_frag_bar_title">Главная страница</string>
     <string name="vacancy_frad_bar_title">Вакансии</string>
