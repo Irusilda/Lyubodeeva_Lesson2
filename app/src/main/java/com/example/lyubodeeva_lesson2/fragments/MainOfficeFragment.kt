@@ -9,6 +9,7 @@ import com.example.lyubodeeva_lesson2.*
 import com.example.lyubodeeva_lesson2.databinding.FragmentMainOfficeBinding
 
 class MainOfficeFragment : Fragment(), CustomTitle, OnItemClickListener {
+
   lateinit var binding: FragmentMainOfficeBinding
   lateinit var adapter: OfficeAdapter
 
@@ -45,6 +46,7 @@ class MainOfficeFragment : Fragment(), CustomTitle, OnItemClickListener {
     override fun getTitleRes(): Int = R.string.offices_frad_bar_title
 
     override fun onItemClick(item: OfficeData) {
+
         val city = item.officeCity
         var desc = ""
         when(city){

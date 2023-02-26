@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/vacancy_recycle"
+
     tools:listitem="@layout/item_vacancy"
+    tools:context=".fragments.VacancyFragment"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/medium_margin"
+        android:autofillHints=""
+        android:hint="@string/Search_text"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"/>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/vacancy_recycle"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".fragments.VacancyFragment">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
 </androidx.recyclerview.widget.RecyclerView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -33,5 +33,6 @@
     <string name="login_frag_bar_title">Log in</string>
     <string name="vacancy_frad_bar_title">Vacancies</string>
     <string name="offices_frad_bar_title">Offices</string>
+    <string name="Search_text">Search</string>
 </resources>
 

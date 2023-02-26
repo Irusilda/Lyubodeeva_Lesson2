@@ -40,5 +40,6 @@
     <string name="main_frag_bar_title">Главная страница</string>
     <string name="vacancy_frad_bar_title">Вакансии</string>
     <string name="offices_frad_bar_title">Офисы</string>
+    <string name="Search_text">Поиск</string>
 
 </resources>
