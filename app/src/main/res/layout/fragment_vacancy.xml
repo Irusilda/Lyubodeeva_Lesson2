@@ -1,57 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.VacancyFragment">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+    tools:listitem="@layout/item_vacancy"
+    tools:context=".fragments.VacancyFragment"
+    android:orientation="vertical">
 
-<!--      <include-->
-<!--          android:id="@+id/toolbar"-->
-<!--          layout="@layout/toolbar"-->
-<!--          android:layout_width="0dp"-->
-<!--          android:layout_height="wrap_content"-->
-<!--          app:layout_constraintTop_toTopOf="parent"-->
-<!--          app:layout_constraintStart_toStartOf="parent"-->
-<!--          app:layout_constraintEnd_toEndOf="parent"/>-->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/medium_margin"
+        android:autofillHints=""
+        android:hint="@string/Search_text"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"/>
 
-      <com.example.lyubodeeva_lesson2.AndroidTraineeBtn
-          android:id="@+id/first_vacancy"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="@dimen/medium_margin"
-          app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:trainee_title="@string/trainee_title"
-          app:trainee_subtitle="@string/trainee_subtitle"/>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/vacancy_recycle"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
-      <com.example.lyubodeeva_lesson2.AndroidTraineeBtn
-          android:id="@+id/second_vacancy"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="@dimen/medium_margin"
-          app:layout_constraintTop_toBottomOf="@+id/first_vacancy"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:trainee_title="@string/second_vacancy"
-          app:trainee_subtitle="@string/second_vacancy_desc"/>
-
-      <com.example.lyubodeeva_lesson2.AndroidTraineeBtn
-          android:id="@+id/third_vacancy"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="@dimen/medium_margin"
-          app:layout_constraintTop_toBottomOf="@+id/second_vacancy"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:trainee_title="@string/third_vacancy"
-          app:trainee_subtitle="@string/third_vacancy_desc"/>
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+</androidx.recyclerview.widget.RecyclerView>
+</androidx.appcompat.widget.LinearLayoutCompat>

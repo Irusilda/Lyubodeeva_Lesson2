@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), Navigator {
 
         toolbar = binding.root.findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        toolbar.setTitle(R.string.main_frag_bar_title)
+
 
         binding.apply {
             if(savedInstanceState == null) {

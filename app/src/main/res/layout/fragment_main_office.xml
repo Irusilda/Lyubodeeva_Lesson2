@@ -1,66 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:listitem="@layout/item_office"
+    android:id="@+id/office_recycler"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.MainOfficeFragment">
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        android:layout_marginBottom="@dimen/medium_margin">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/moscow_chip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/chips_backgroundTint"
-            android:text="@string/moscow"
-            android:textColor="@color/main_color_text" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/kazan_chip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/chips_backgroundTint"
-            android:text="@string/kazan"
-            android:textColor="@color/main_color_text" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/rostov_chip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/chips_backgroundTint"
-            android:text="@string/rostov"
-            android:textColor="@color/main_color_text" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/minsk_chip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/chips_backgroundTint"
-            android:text="@string/minsk"
-            android:textColor="@color/main_color_text" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/gomel_chip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/chips_backgroundTint"
-            android:text="@string/gomel"
-            android:textColor="@color/main_color_text" />
-    </com.google.android.material.chip.ChipGroup>
-
-
-
-</FrameLayout>
+    tools:context=".fragments.MainOfficeFragment"/>
